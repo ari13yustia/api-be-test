@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SeachDataSwapController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,9 +15,15 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
 
-Route::get('/search_swap/province', [App\Http\Controllers\SeachDataSwapController::class, 'searchDataProvince']);
-Route::get('/search_swap/city', [App\Http\Controllers\SeachDataSwapController::class, 'searchDataCity']);
+Route::group(['middleware' => ['auth:sanctum']], function() {
+    Route::get('/search_swap/province', [SeachDataSwapController::class, 'searchDataProvince']);
+    Route::get('/search_swap/city', [SeachDataSwapController::class, 'searchDataCity']);
+
+    Route::post('/logout', [AuthController::class, 'logout']);
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
