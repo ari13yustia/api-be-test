@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
-    protected $table = 'provinces';
-    protected $fillable = ['id','province'];
+    protected $table = 'cities';
+    protected $fillable = ['id','province_id','type','city_name','postal_code'];
     protected $primaryKey = 'id';
 }
