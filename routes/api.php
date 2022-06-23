@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/search/province', [App\Http\Controllers\CariDataController::class, 'searchDataProvince']);
+Route::get('/search/city', [App\Http\Controllers\CariDataController::class, 'searchDataCity']);
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
