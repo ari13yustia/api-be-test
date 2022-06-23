@@ -1,6 +1,41 @@
-## About Laravel
+## Instalasi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Clone repository
+$ git clone https://github.com/ari13yustia/api-be-test.git
+
+Setting .env
+
+List Branch
+$ git branch -a
+
+## Sprint 1 Fetching Data
+fetching API data provinsi & kota dan data
+disimpan ke dalam database.
+
+- $ git checkout sprint1
+
+- composer Install
+
+- php artisan migrate
+
+- php artisan key:generate
+
+- php artisan command:fetch_data (Fetch data dan disimpan ke database)
+
+- vendor/bin/phpunit (Unit Testing)
+
+Cari data province dan city
+- php artisan serve
+- http://127.0.0.1:8000/api/search/province?id={id province}
+- http://127.0.0.1:8000/api/search/city?id={id city}
+
+## Sprint 2 Swapable implementation​ untuk endpoint pencarian provinsi dan kota
+Membuat sumber data pencarian province & cities bisa melalui database​ atau direct API​ raja ongkir (swapable implementation). Proses swap implementasi dapat dilakukan melalui konfigurasi tanpa merubah source code yang sudah dibuat.
+
+- $ git checkout sprint1
+
+- composer Install
+
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
