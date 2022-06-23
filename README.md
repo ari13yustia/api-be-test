@@ -48,15 +48,15 @@ Cari data province dan city
 *Register
 - http://127.0.0.1:8000/api/register
 dengan body :
-name                => input_name
-email               => input_email
-password            => input_password
+name                => input_name, 
+email               => input_email, 
+password            => input_password, 
 password_confirment => input_password_confirment
 
 *Login
 - http://127.0.0.1:8000/api/login
 dengan body :
-email               => input_email
+email               => input_email, 
 password            => input_password
 
 *Mengubah sumber data pencarian province & cities (swap)
@@ -67,11 +67,11 @@ password            => input_password
 *Cari data Province
 http://127.0.0.1:8000/api/search_swap/province?id={id province}
 dengan header :
-Accept          => application/json
+Accept          => application/json, 
 Authorization   => Bearer {token}
 
 *Cari data Province
 http://127.0.0.1:8000/api/search_swap/city?id={id city}
 dengan header :
-Accept          => application/json
+Accept          => application/json, 
 Authorization   => Bearer {token}
