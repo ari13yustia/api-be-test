@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SeachDataController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/search/province', [App\Http\Controllers\CariDataController::class, 'searchDataProvince']);
-Route::get('/search/city', [App\Http\Controllers\CariDataController::class, 'searchDataCity']);
+Route::get('/search/province', [SeachDataController::class, 'searchDataProvince']);
+Route::get('/search/city', [SeachDataController::class, 'searchDataCity']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
