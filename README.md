@@ -1,14 +1,14 @@
 ## Instalasi
 
 Clone repository
-$ git clone https://github.com/ari13yustia/api-be-test.git
+- $ git clone https://github.com/ari13yustia/api-be-test.git
 
-Setting .env
+- Setting .env
 
-composer Install
+- composer Install
 
 List Branch
-$ git branch -a
+- $ git branch -a
 
 ## Sprint 1 Fetching Data
 fetching API data provinsi & kota dan data
