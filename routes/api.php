@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/search/province', [App\Http\Controllers\CariDataController::class, 'searchDataProvince']);
-Route::get('/search/city', [App\Http\Controllers\CariDataController::class, 'searchDataCity']);
-
-
 Route::get('/search_swap/province', [App\Http\Controllers\SeachDataSwapController::class, 'searchDataProvince']);
 Route::get('/search_swap/city', [App\Http\Controllers\SeachDataSwapController::class, 'searchDataCity']);
 
